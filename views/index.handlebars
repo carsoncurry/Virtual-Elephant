@@ -1,0 +1,42 @@
+<div class="jumbotron">
+  <h1 class="text-center">{{msg}}</h1>
+  <hr>
+  <h2 class="text-center">This Is Your Virtual Elephant Party Page!</h2>
+</div>
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-5">
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Your Name</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Gift Description</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Describe Your Gift"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="example-image">Gift Image</label>
+            <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload a link to your image"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+      </div>
+      <div class="col-5 offset-2">
+        <h3>Gift Pile:</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">Secret Gift</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
