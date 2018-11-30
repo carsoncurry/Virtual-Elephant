@@ -1,5 +1,5 @@
 // Make Connection
-var socket = io.connect('JAWSDB_URL');
+var socket = io.connect('https://fathomless-eyrie-21415.herokuapp.com/');
 
 // Query DOM
 var message = document.getElementById('message'),
