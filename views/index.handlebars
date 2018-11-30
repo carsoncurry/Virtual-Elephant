@@ -5,11 +5,15 @@
 <div id="home">
   <div class="container bg-light">
     <div class="row col-md-12">
-        <h2 class="text-center">Welcome to your personal gift exchange party page!</h2>
+        <h2 class="text-center">Please fill out some information so that you can enter the party!</h2>
         <form class="clearfix mb-4 col-md-12" action="POST">
           <div class="form-group">
-            <label for="example-text">Your Name</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Your Name">
+            <lable for="giver-text">Gifter</lable>
+            <input type="text" id="giver-text" class="form-control" aria-describedby="giver-text" placeholder="Enter Who's Giving The Gift">
+          </div>
+          <div class="form-group">
+            <label for="example-text">Gift Recipient</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Who's Recieving The Gift">
           </div>
           <div class="form-group">
             <label for="example-description">Gift Description</label>
@@ -17,36 +21,15 @@
           </div>
           <div class="form-group">
             <label for="example-image">Gift Image</label>
-            <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload a link to your image"></textarea>
+            <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload A Link To Your Image"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
     </div>
   </div>
-        
+
   <div class="container bg-light">
     <div class="row">
-      <div class="col-md-2">
-        <h3>Guest:</h3>
-
-      </div>
-      <div class="col-md-2">
-        <h3>Current Gift:</h3>
-      </div>
-
-      <div class="col-md-5 offset-2">
-        <h3>Gift Pile:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">Secret Gift</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <div id="elephant-chat">
     <div id="chat-window">
@@ -56,7 +39,20 @@
     <input id="handle" type="text" placeholder="Handle" />
     <input id="message" type="text" placeholder="Message" />
       <button id="send">Send</button>
+  </div>
+
+      <div class="col-md-5 offset-2">
+        <h3>Gift Pile:</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}'s Gift from {{this.gifter}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
     </div>
+  </div>
 
 </div>
 

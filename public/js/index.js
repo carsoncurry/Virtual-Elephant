@@ -2,6 +2,7 @@
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $giftImage = $("#gift-image");
+var $giftGiver = $("#giver-text");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
@@ -23,12 +24,12 @@ var API = {
       type: "GET"
     });
   },
-  deleteExample: function(id) {
-    return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
-    });
-  }
+  // deleteExample: function(id) {
+  //   return $.ajax({
+  //     url: "api/examples/" + id,
+  //     type: "DELETE"
+  //   });
+  // }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
@@ -67,11 +68,13 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    description: $exampleDescription.val().trim(),
+    gifter: $giftGiver.val().trim(),
+    gift: $giftImage.val().trim()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter your name and gift description!");
+  if (!(example.text && example.description && example.gifter && example.gift)) {
+    alert("You must enter all fields to join the party!");
     return;
   }
 
@@ -81,19 +84,21 @@ var handleFormSubmit = function(event) {
 
   $exampleText.val("");
   $exampleDescription.val("");
+  $giftImage.val("");
+  $giftGiver.val("");
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
+// // handleDeleteBtnClick is called when an example's delete button is clicked
+// // Remove the example from the db and refresh the list
+// var handleDeleteBtnClick = function() {
+//   var idToDelete = $(this)
+//     .parent()
+//     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
-};
+//   API.deleteExample(idToDelete).then(function() {
+//     refreshExamples();
+//   });
+// };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
