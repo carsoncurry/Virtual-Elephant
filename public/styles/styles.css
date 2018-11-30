@@ -1,5 +1,6 @@
-body {
+body, .placeholder {
   background: url("../images/Christmas-Jumper-Pattern-4.png");
+  font-family: 'Source Code Pro', monospace;
 }
 
 .jumbotron {
@@ -7,12 +8,13 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-h1, h2, h3, label {
+h1, h2, h3 {
   font-family: 'VT323', monospace;
 }
 
 .container {
   margin-bottom: 50px;
+  background: url("../images/Free-Christmas-Blue-Background-2.png");
 }
 
 .list-group-item {
@@ -26,7 +28,7 @@ h1, h2, h3, label {
 
 #elephant-chat{
   max-width: 500px;
-  margin: 30px auto;
+  margin-bottom: 30px;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
   border-radius: 2px;
@@ -35,7 +37,7 @@ h1, h2, h3, label {
 #chat-window{
   height: 200px;
   overflow: auto;
-  background: #f9f9f9;
+  background: white;
 }
 
 #output p{
@@ -74,12 +76,16 @@ input{
   font-size: 16px;
 }
 
-button{
-  background: #575ed8;
+#send {
+  background: red;
   color: #fff;
   font-size: 18px;
   border: 0;
   padding: 12px 0;
   width: 100%;
   border-radius: 0 0 2px 2px;
+}
+
+#link-image {
+  max-width: 500px;
 }

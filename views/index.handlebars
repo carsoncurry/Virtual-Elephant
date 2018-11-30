@@ -3,7 +3,7 @@
 </div>
 
 <div id="home">
-  <div class="container bg-light">
+  <div class="container bg-light rounded">
     <div class="row col-md-12">
         <h2 class="text-center">Please fill out some information so that you can enter the party!</h2>
         <form class="clearfix mb-4 col-md-12" action="POST">
@@ -23,26 +23,36 @@
             <label for="example-image">Gift Image</label>
             <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload A Link To Your Image"></textarea>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          <button id="submit" class="btn btn-primary float-right bg-danger">Submit</button>
         </form>
     </div>
   </div>
 
-  <div class="container bg-light">
-    <div class="row">
+  <br>
 
-  <div id="elephant-chat">
-    <div id="chat-window">
-      <div id="output"></div>
-      <div id="feedback"></div>
+  <div class="container bg-light rounded">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Your Party Room</h1>
+      </div>
     </div>
-    <input id="handle" type="text" placeholder="Handle" />
-    <input id="message" type="text" placeholder="Message" />
-      <button id="send">Send</button>
-  </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-5">
+        <h2>Group Chat:</h2>
+        <div id="elephant-chat">
+          <div id="chat-window">
+            <div id="output"></div>
+            <div id="feedback"></div>
+          </div>
+          <input id="handle" type="text" placeholder="Handle" />
+          <input id="message" type="text" placeholder="Message" />
+            <button class="btn bg-danger" id="send">Send</button>
+        </div>
+      </div>
 
       <div class="col-md-5 offset-2">
-        <h3>Gift Pile:</h3>
+        <h2>Gift Pile:</h2>
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
