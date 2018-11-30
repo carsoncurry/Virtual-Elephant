@@ -116,7 +116,7 @@ app.post("/send", (req, res) => {
 
   // create reusable smtpTransporter object using the default SMTP transport
   let smtpTransporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'smtp.gmail.com',
     auth: {
       xoauth2: xoauth2.createXOAuth2Generator({
         user: 'gezahegnw@gmail.com',

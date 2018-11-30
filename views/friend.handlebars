@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="wrapper animated bounceInLeft">
             <div class="company-info">
@@ -26,14 +27,14 @@
             <div class="contact">
                 <h3>Invite Your Friend</h3>
                 {{msg}}
-                <form method="POST" action="send">
+                <form method="POST" action="/api/friend">
                     <p>
                         <label>Name</label>
-                        <input type="text" id="innitation-name" name="name">
+                        <input type="text" id="innitation-name" name="name" required>
                     </p>
                     <p>
                         <label>Email Address</label>
-                        <input type="email" id="invitation-email" name="email">
+                        <input type="email" id="invitation-email" name="email" required>
                     </p>
                     <p class="full">
                         <label>Message</label>

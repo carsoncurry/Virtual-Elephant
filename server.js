@@ -3,8 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var db = require("./models");
-var nodemailer = require("nodemailer");
-var xoauth2 = require("xoauth2");
+
 var path = require('path');
 
 
