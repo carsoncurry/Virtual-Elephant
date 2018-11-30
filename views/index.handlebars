@@ -1,6 +1,11 @@
 <div class="jumbotron bg-info">
   <h1 class="text-center"><img src="https://image.flaticon.com/icons/svg/113/113269.svg" id="elephant-logo" alt="logo"> {{msg}} <img src="https://image.flaticon.com/icons/svg/113/113269.svg" id="elephant-logo" alt="logo"></h1>
 </div>
+<div id="home" {{hidden}}>
+  <div class="container">
+    <div class="row">
+      <div class="col-5">
+        <form class="clearfix mb-4" action="POST">
 
 <div id="home">
   <div class="container bg-light rounded">
@@ -11,6 +16,7 @@
             <lable for="giver-text">Gifter</lable>
             <input type="text" id="giver-text" class="form-control" aria-describedby="giver-text" placeholder="Enter Who's Giving The Gift">
           </div>
+
           <div class="form-group">
             <label for="example-text">Gift Recipient</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Who's Recieving The Gift">
@@ -66,7 +72,14 @@
 
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function{
+
+  });
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script src="js/chat.js"></script>
 <script src="/js/index.js"></script>
-
