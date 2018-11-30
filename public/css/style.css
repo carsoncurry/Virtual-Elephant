@@ -1,21 +1,17 @@
-.list-group-item {
-  line-height: 2.5;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #9cc0e4;
-  color: #21364b;
+  background: #92bde7;
+  color: #485e74;
   line-height: 1.6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 1em;
 }
 
-.box-container {
-  max-width: 680px;
+.container {
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -31,7 +27,7 @@ ul {
 }
 
 .brand span {
-  color: rgb(231, 219, 219);
+  color: #fff;
 }
 
 .wrapper {
@@ -61,7 +57,6 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
- 
 }
 
 .contact form label {
