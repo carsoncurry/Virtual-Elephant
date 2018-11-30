@@ -4,7 +4,7 @@ var exphbs = require("express-handlebars");
 
 var bodyParser = require("body-parser");
 var socket = require('socket.io');
-
+var xoauth2 = require('xoauth2');
 
 var db = require("./models");
 
