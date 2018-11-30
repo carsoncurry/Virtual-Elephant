@@ -1,5 +1,5 @@
 // Make Connection
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('JAWSDB_URL');
 
 // Query DOM
 var message = document.getElementById('message'),
