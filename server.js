@@ -1,11 +1,17 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+<<<<<<< HEAD
+var bodyParser = require("body-parser");
+var socket = require('socket.io');
+
+=======
 
 var bodyParser = require("body-parser");
 var socket = require('socket.io');
 
 
+>>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 var db = require("./models");
 
 var path = require('path');
@@ -51,10 +57,14 @@ if (process.env.NODE_ENV === "test") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function () {
+<<<<<<< HEAD
+  const server = app.listen(PORT, function () {
+=======
   app.listen(PORT, function () {
 db.sequelize.sync(syncOptions).then(function() {
   const server = app.listen(PORT, function() {
 
+>>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
@@ -62,17 +72,17 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
   const io = socket(server);
-  io.on('connection', function(socket) {
-      console.log('made socket connection', socket.id);
+  io.on('connection', function (socket) {
+    console.log('made socket connection', socket.id);
 
-      socket.on('chat', function(data) {
-          io.sockets.emit('chat', data);
-      });
+    socket.on('chat', function (data) {
+      io.sockets.emit('chat', data);
+    });
 
 
-      socket.on('typing', function(data) {
-          socket.broadcast.emit('typing', data);
-      });
+    socket.on('typing', function (data) {
+      socket.broadcast.emit('typing', data);
+    });
 
   });
 });
