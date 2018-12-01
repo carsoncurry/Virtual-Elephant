@@ -24,6 +24,9 @@
                 </p>
             </div>
             <div class="contact">
+                {{#if emailSent}}
+                <div>Email was sent successfully!</div>
+                {{/if}}
                 <h3>Invite Your Friend</h3>
                 {{msg}}
                 <form method="POST" action="/api/friend">

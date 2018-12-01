@@ -41,7 +41,7 @@ module.exports = function (app) {
       .send(msg)
       .then(() => {
         //Celebrate
-        res.send("email sent");
+        res.render("friend", { emailSent: true });
       })
       .catch(error => {
 
