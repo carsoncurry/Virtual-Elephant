@@ -20,11 +20,6 @@ h1, h2, h3 {
 .list-group-item {
   line-height: 2.5;
 }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 * {
   box-sizing: border-box;
 }
@@ -158,10 +153,7 @@ ul {
   .brand {
     text-align: left;
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 
 #elephant-logo {
   width: 100px;
@@ -170,11 +162,8 @@ ul {
 
 #elephant-chat{
   max-width: 500px;
-<<<<<<< HEAD
-  margin-bottom: 30px;
-=======
   margin: 30px auto;
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
+  margin-bottom: 30px;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
   border-radius: 2px;
@@ -183,11 +172,7 @@ ul {
 #chat-window{
   height: 200px;
   overflow: auto;
-<<<<<<< HEAD
-  background: white;
-=======
   background: #f9f9f9;
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 }
 
 #output p{
@@ -226,24 +211,21 @@ input{
   font-size: 16px;
 }
 
-<<<<<<< HEAD
-#send {
-  background: red;
-=======
+
+
 button{
   background: #575ed8;
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
+}
+#send {
+  background: red;
   color: #fff;
   font-size: 18px;
   border: 0;
   padding: 12px 0;
   width: 100%;
   border-radius: 0 0 2px 2px;
-<<<<<<< HEAD
 }
 
 #link-image {
   max-width: 500px;
-=======
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 }
