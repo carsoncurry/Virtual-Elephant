@@ -3,15 +3,17 @@
 }
 
 body {
-  background: #92bde7;
-  color: #485e74;
+  background: #9cc0e4;
+  color: #21364b;
   line-height: 1.6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 1em;
 }
-
-.container {
-  max-width: 1170px;
+#innitation-name{
+    padding: 10px;
+}
+.box-container {
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -27,7 +29,7 @@ ul {
 }
 
 .brand span {
-  color: #fff;
+  color: rgb(231, 219, 219);
 }
 
 .wrapper {
@@ -47,7 +49,28 @@ ul {
   text-align: center;
   margin: 0 0 1rem 0;
 }
+/*g added on 11/30*/
+.form-control{
+    width: 300px;
+    height: 30px;
+}
+.new-input{
+    padding-bottom: 15px;
+}
+.name-input{
+    padding-right: 20px;
+    width: 100px;
+}
+.email-input{
+    padding: 0 20px 0 20px;
+}
+.fa-times{
+    padding-left: 20px;
+    color: red;
+    font-size: 24px;
+}
 
+/**/
 .contact {
   background: #f9feff;
 }
@@ -57,6 +80,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+ 
 }
 
 .contact form label {
@@ -83,6 +107,7 @@ ul {
   background: #c9e6ff;
   border: 0;
   text-transform: uppercase;
+
 }
 
 .contact form button:hover,
@@ -109,4 +134,5 @@ ul {
   .brand {
     text-align: left;
   }
+
 }

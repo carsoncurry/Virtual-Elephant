@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container bg-light">
   <div class="row">
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title">Example</h5>
+          <h5 class="card-title">To: {{example.text}}</h5>
           <p>
-            <strong>ID</strong>: {{example.id}}</p>
+            <strong>From</strong>: {{example.gifter}}</p>
           <p>
             <p>
               <strong>Text</strong>: {{example.text}}</p>
@@ -26,13 +26,13 @@
         <div class="card-body">
           <h5 class="card-title">Example</h5>
           <p>
-            <strong>Name</strong>: {{name}}</p>
+            <strong>Gift</strong>: {{example.description}}</p>
           <p>
-            <p>
-              <strong>Email</strong>: {{email}}</p>
-            <p>
-              <strong>Message</strong> {{message}}</p>
-            <a href="/">← Back To Home</a>
+            <strong>Picture</strong>: </p>
+          <br>
+          <img id="link-image" src="{{example.gift}}" />
+          <br>
+          <a href="/">← Back To The Party!</a>
         </div>
       </div>
     </div>
