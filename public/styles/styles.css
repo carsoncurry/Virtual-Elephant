@@ -20,8 +20,6 @@ h1, h2, h3 {
 .list-group-item {
   line-height: 2.5;
 }
-
-
 * {
   box-sizing: border-box;
 }
@@ -71,7 +69,28 @@ ul {
   text-align: center;
   margin: 0 0 1rem 0;
 }
+/*g added on 11/30*/
+.form-control{
+    width: 300px;
+    height: 30px;
+}
+.new-input{
+    padding-bottom: 15px;
+}
+.name-input{
+    padding-right: 20px;
+    width: 100px;
+}
+.email-input{
+    padding: 0 20px 0 20px;
+}
+.fa-times{
+    padding-left: 20px;
+    color: red;
+    font-size: 24px;
+}
 
+/**/
 .contact {
   background: #f9feff;
 }
@@ -105,15 +124,15 @@ ul {
 }
 
 .contact form button {
-  background: #c9e6ff;
+  background: #46637c;
   border: 0;
   text-transform: uppercase;
 }
 
 .contact form button:hover,
 .contact form button:focus {
-  background: #92bde7;
-  color: #fff;
+  background: #51789e;
+  color: rgb(230, 52, 52);
   outline: 0;
   transition: background-color 2s ease-out;
 }
@@ -134,6 +153,7 @@ ul {
   .brand {
     text-align: left;
   }
+}
 
 #elephant-logo {
   width: 100px;
@@ -142,6 +162,7 @@ ul {
 
 #elephant-chat{
   max-width: 500px;
+  margin: 30px auto;
   margin-bottom: 30px;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
@@ -151,7 +172,7 @@ ul {
 #chat-window{
   height: 200px;
   overflow: auto;
-  background: white;
+  background: #f9f9f9;
 }
 
 #output p{
@@ -190,6 +211,11 @@ input{
   font-size: 16px;
 }
 
+
+
+button{
+  background: #575ed8;
+}
 #send {
   background: red;
   color: #fff;
