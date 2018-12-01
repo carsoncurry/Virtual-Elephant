@@ -24,12 +24,28 @@ var API = {
       type: "GET"
     });
   },
+<<<<<<< HEAD
+=======
+ 
+  
+  deleteExample: function (id) {
+    return $.ajax({
+      url: "api/examples/" + id,
+      type: "DELETE"
+    });
+  }
+  
+>>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
   // deleteExample: function(id) {
   //   return $.ajax({
   //     url: "api/examples/" + id,
   //     type: "DELETE"
   //   });
   // }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
@@ -87,7 +103,10 @@ var handleFormSubmit = function (event) {
   $giftImage.val("");
   $giftGiver.val("");
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 // // handleDeleteBtnClick is called when an example's delete button is clicked
 // // Remove the example from the db and refresh the list
 // var handleDeleteBtnClick = function() {
@@ -99,6 +118,10 @@ var handleFormSubmit = function (event) {
 //     refreshExamples();
 //   });
 // };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
