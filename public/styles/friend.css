@@ -9,9 +9,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 1em;
 }
+
 #innitation-name{
     padding: 10px;
 }
+
 .box-container {
   max-width: 680px;
   margin-left: auto;

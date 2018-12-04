@@ -1,11 +1,21 @@
-body, .placeholder {
+body {
   background: url("../images/Christmas-Jumper-Pattern-4.png");
   font-family: 'Source Code Pro', monospace;
+}
+
+ul:last-child {
+  margin-bottom: 15px;
+}
+
+a {
+  font-weight: bold;
+  color: red;
 }
 
 .jumbotron {
   background: url("../images/Free-Christmas-Blue-Background-2.png");
   font-family: 'Press Start 2P', cursive;
+  border-bottom: solid black;
 }
 
 h1, h2, h3 {
@@ -15,144 +25,19 @@ h1, h2, h3 {
 .container {
   margin-bottom: 50px;
   background: url("../images/Free-Christmas-Blue-Background-2.png");
+  border: solid black;
+}
+
+#gift-container {
+  margin-top: 50px;
+}
+
+.card {
+  margin-bottom: 30px;
 }
 
 .list-group-item {
   line-height: 2.5;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: #9cc0e4;
-  color: #21364b;
-  line-height: 1.6;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1em;
-}
-
-.box-container {
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.brand {
-  text-align: center;
-}
-
-.brand span {
-  color: rgb(231, 219, 219);
-}
-
-.wrapper {
-  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
-}
-
-.wrapper > * {
-  padding: 1em;
-}
-
-.company-info {
-  background: #c9e6ff;
-}
-
-.company-info h3,
-.company-info ul {
-  text-align: center;
-  margin: 0 0 1rem 0;
-}
-/*g added on 11/30*/
-.form-control{
-    width: 300px;
-    height: 30px;
-}
-.new-input{
-    padding-bottom: 15px;
-}
-.name-input{
-    padding-right: 20px;
-    width: 100px;
-}
-.email-input{
-    padding: 0 20px 0 20px;
-}
-.fa-times{
-    padding-left: 20px;
-    color: red;
-    font-size: 24px;
-}
-
-/**/
-.contact {
-  background: #f9feff;
-}
-
-/* FORM STYLES */
-.contact form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
- 
-}
-
-.contact form label {
-  display: block;
-}
-
-.contact form p {
-  margin: 0;
-}
-
-.contact form .full {
-  grid-column: 1 / 3;
-}
-
-.contact form button,
-.contact form input,
-.contact form textarea {
-  width: 100%;
-  padding: 1em;
-  border: 1px solid #c9e6ff;
-}
-
-.contact form button {
-  background: #46637c;
-  border: 0;
-  text-transform: uppercase;
-}
-
-.contact form button:hover,
-.contact form button:focus {
-  background: #51789e;
-  color: rgb(230, 52, 52);
-  outline: 0;
-  transition: background-color 2s ease-out;
-}
-
-/* LARGE SCREENS */
-@media (min-width: 700px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .wrapper > * {
-    padding: 2em;
-  }
-
-  .company-info h3,
-  .company-info ul,
-  .brand {
-    text-align: left;
-  }
 }
 
 #elephant-logo {
@@ -162,7 +47,6 @@ ul {
 
 #elephant-chat{
   max-width: 500px;
-  margin: 30px auto;
   margin-bottom: 30px;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
@@ -172,14 +56,16 @@ ul {
 #chat-window{
   height: 200px;
   overflow: auto;
-  background: #f9f9f9;
+  background: white;
 }
 
 #output p{
   padding: 14px 0px;
   margin: 0 20px;
   border-bottom: 1px solid #e9e9e9;
-  color: #555;
+  font-weight: bold;
+  color: darkolivegreen;
+  font-family: 'Source Code Pro', monospace;
 }
 
 #feedback p{
@@ -189,13 +75,16 @@ ul {
 }
 
 #output strong{
-  color: #575ed8;
+  color: red;
+  font-family: 'Source Code Pro', monospace;
 }
 
 label{
   box-sizing: border-box;
   display: block;
   padding: 10px 20px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
 }
 
 input{
@@ -209,13 +98,9 @@ input{
   border-bottom: 1px solid #eee;
   font-family: Nunito;
   font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
 }
 
-
-
-button{
-  background: #575ed8;
-}
 #send {
   background: red;
   color: #fff;
@@ -224,8 +109,15 @@ button{
   padding: 12px 0;
   width: 100%;
   border-radius: 0 0 2px 2px;
+  font-family: 'Source Code Pro', monospace;
 }
 
 #link-image {
   max-width: 500px;
+}
+
+footer {
+  font-weight: bold;
+  background: url("../images/Free-Christmas-Blue-Background-2.png");
+  border-top: solid black;
 }
