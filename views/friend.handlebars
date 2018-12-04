@@ -15,43 +15,28 @@
 <body>
     <div class="container">
         <div class="wrapper animated bounceInLeft">
-            <div class="company-info">
-                <p>
-                    Each year around Christmas time people all over the world exchange gifts.
-                    To keep things interesting though, you can randomly assign persons to each other to give a present
-                    to one
-                    another.
-                </p>
-            </div>
             <div class="contact">
                 {{#if emailSent}}
-                <div>Email was sent successfully!</div>
+                <br>
+                <div class="alert alert-danger col-md-3 font-weight-bold" role="alert">Email successfully sent!</div>
                 {{/if}}
-                <h3>Invite Your Friend</h3>
+                <h3>Invite Guests</h3>
                 {{msg}}
                 <form method="POST" action="/api/friend">
-                    <p>
-                        <label>Name</label>
-                        <input type="text" id="author_name" class="form-control" name="name">
-                    </p>
-                    <p>
-                        <label>Email Address</label>
-                        <input type="email" id="author_email" class="form-control" name="email">
-                    </p>
-                    <p class="full">
-                        <label>Message</label>
-                        <textarea name="message" id="invitation-message" rows="3"></textarea>
-                    </p>
-                    <p class="full">
-                        <button id="invitation-button" class="btn btn-danger" type="submit">Send Invitation</button>
-                    </p>
+                    <label>Guest Name</label>
+                    <input type="text" id="author_name" class="form-control col-md-12" name="name" placeholder="Enter your guest's name.">
+                    <label>Guest Email</label>
+                    <input type="email" id="author_email" class="form-control col-md-12" name="email" placeholder="Enter your guest's email address.">
+                    <label>Message</label>
+                    <textarea name="message" id="invitation-message" class="col-md-12" rows="6" placeholder="Leave your guest a message."></textarea>
+                    <br>
+                    <button id="invitation-button" class="btn btn-lg btn-danger" type="submit">Send Invitation</button>
+                    <br>
+                    <hr>
                     <div class="text-center">
-                        <a href="/" class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span>
-                            Go To Virtual Elephant Page!
-                        </a>
+                        <a href="/" class="btn btn-sm btn-danger">Return to the Party</a>
                     </div>
                     <br>
-                    <p><a href="https://fathomless-eyrie-21415.herokuapp.com/">Click here to play game</a></p>
                 </form>
 
             </div>

@@ -21,7 +21,7 @@
           <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Please, leave a brief description of the gift."></textarea>
         </div>
         <div class="form-group">
-          <label for="example-image">Gift Image (Not Require) </label>
+          <label for="example-image">Gift Image (Not Required) </label>
           <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload an image link so they can see their gift!"></textarea>
         </div>
         <button id="submit" class="btn btn-primary float-right bg-danger"><i class="fas fa-gift"></i> Submit</button>
@@ -38,20 +38,25 @@
       </div>
     </div>
     <hr>
-    <div class="row">
-      <div class="col-md-12 bg-light">
-        <h3 class="text-center">
+
+  <div class="container bg-light rounded col-md-8 offset-2">
+    <div class="row bg-light">
+      <div class="rounded">
+        <h3 class="text-center" id="welcome-text">
           Welcome to your Virtual Elephant party room!
-          From here you can invite more guests, send gifts, see what gifts are headed your way and leave messages in the chat box below!
+          From here you can invite more guests, send gifts, see what you're getting and leave messages in the chat box below!
         </h3>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <a href="/api/friend"><button id="invite-button" class="btn btn-lg btn-danger"> Invite Guests <i class="fas fa-user"></i></button></a>
+    <div class="row bg-light">
+      <div class="col-md-3 offset-1">
+        <a href="/api/friend"><button id="invite-button" class="btn btn-lg btn-danger"><i class="fas fa-user"></i> Invite Guests! </button></a>
+      </div>
+      <div class="row-md-3 offset-3">
+        <button id="modal" class="btn btn-lg btn-danger"><i class="fas fa-gift"></i> Send Gifts! </button>
       </div>
     </div>
+  </div>
 
     <div class="row">
       <div class="col-md-5">

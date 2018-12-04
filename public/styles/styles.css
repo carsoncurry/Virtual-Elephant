@@ -112,6 +112,15 @@ input{
   font-family: 'Source Code Pro', monospace;
 }
 
+#invite-button, #modal {
+  font-size: 18px;
+  margin: 15px 0 15px 0;
+}
+
+#welcome-text {
+  margin: 5px;
+}
+
 #link-image {
   max-width: 500px;
 }
