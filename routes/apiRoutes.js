@@ -4,6 +4,8 @@ const sgMail = require('@sendgrid/mail');
 //sgMail.setApiKey('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');//g api key
 sgMail.setApiKey('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');//nate api key
 
+sgMail.setApiKey('');
+
 var db = require("../models");
 
 module.exports = function (app) {
