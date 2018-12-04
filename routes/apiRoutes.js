@@ -1,7 +1,11 @@
 const sgMail = require('@sendgrid/mail');
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+//sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+//sgMail.setApiKey('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');//g api key
+sgMail.setApiKey('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');//nate api key
 
 sgMail.setApiKey('');
+
 var db = require("../models");
 
 module.exports = function (app) {
@@ -23,16 +27,21 @@ module.exports = function (app) {
     <p>You have a new gift exchange invitation request</p>
     <h3>Invitation Details</h3>
     <ul>  
-      <li>Name: ${req.body.name}</li>
-      <li>Email: ${req.body.email}</li>
+      <li>Name: ${req.body.receiverName}</li>
+      <li>Email: ${req.body.receiverEmail}</li>
+    </ul>
+    <ul>
+      <li>Name: ${req.body.senderName}</li>
+      <li>Email: ${req.body.senderEmail}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
     <p><a href="https://fathomless-eyrie-21415.herokuapp.com/">Click here to join the party</a></p>
   `;
     const msg = {
-      to: req.body.email,
-      from: '"Gezahegn Worku" <gezahegnw@gmail.com>', // sender address
+      to: req.body.receiverEmail,
+      //from: '"Gezahegn Worku" <gezahegnw@gmail.com>', // sender address
+      from: req.body.senderEmail, // sender address
       subject: 'Gift exchange invitation',
       text: 'You are invited to our chirstmas gif exchange party',
       html: output,

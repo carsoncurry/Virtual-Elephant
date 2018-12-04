@@ -7,7 +7,9 @@ body, .placeholder {
   background: url("../images/Free-Christmas-Blue-Background-2.png");
   font-family: 'Press Start 2P', cursive;
 }
-
+#home{
+  padding-top: 30px;
+}
 h1, h2, h3 {
   font-family: 'VT323', monospace;
 }
@@ -19,17 +21,6 @@ h1, h2, h3 {
 
 .list-group-item {
   line-height: 2.5;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: #9cc0e4;
-  color: #21364b;
-  line-height: 1.6;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1em;
 }
 
 .box-container {
@@ -47,52 +38,67 @@ ul {
 .brand {
   text-align: center;
 }
-
+a {
+  font-size: 24px;
+  color: rgb(11, 57, 209);
+}
+a :hover{
+  background-color: yellow;
+}
 .brand span {
   color: rgb(231, 219, 219);
 }
 
 .wrapper {
   box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+
 }
 
 .wrapper > * {
   padding: 1em;
 }
 
-.company-info {
+.invitation-form {
   background: #c9e6ff;
 }
 
-.company-info h3,
-.company-info ul {
+.invitation-form h3,
+.invitation-form ul {
   text-align: center;
   margin: 0 0 1rem 0;
 }
 /*g added on 11/30*/
-.form-control{
-    width: 300px;
+#author_name, #author_email{
     height: 30px;
 }
-.new-input{
-    padding-bottom: 15px;
+.para{
+  font-size: 24px;
+  color: rgb(37, 71, 9);
 }
-.name-input{
-    padding-right: 20px;
-    width: 100px;
+.h2{
+  font-size: 30px;
+  font-weight: 900px;
 }
-.email-input{
-    padding: 0 20px 0 20px;
+#invitation-container{
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
-.fa-times{
-    padding-left: 20px;
-    color: red;
-    font-size: 24px;
+.email-message{
+  background-color: #8cda84;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 20px;
+  
+}
+.about-form{
+  font-size: 24px;
 }
 
 /**/
 .contact {
-  background: #f9feff;
+  background: #768c91;
 }
 
 /* FORM STYLES */
@@ -105,6 +111,7 @@ ul {
 
 .contact form label {
   display: block;
+
 }
 
 .contact form p {
@@ -128,33 +135,44 @@ ul {
   border: 0;
   text-transform: uppercase;
 }
-
+.bounceInLeft{
+  background-color: red;
+}
 .contact form button:hover,
 .contact form button:focus {
-  background: #51789e;
-  color: rgb(230, 52, 52);
+  background: #c0ff14;
+  color: rgb(78, 166, 218);
   outline: 0;
   transition: background-color 2s ease-out;
 }
-
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(109, 102, 102);
+   color: white;
+   text-align: center;
+   padding-bottom: 5px;
+   padding-top: 10px;
+}
 /* LARGE SCREENS */
-@media (min-width: 700px) {
-  .wrapper {
+@media(min-width:769px){
+  .wrapper{
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
-
-  .wrapper > * {
-    padding: 2em;
-  }
-
-  .company-info h3,
-  .company-info ul,
-  .brand {
-    text-align: left;
-  }
+  } 
 }
-
+@media(max-width:768px){
+.contact form button {
+  background-color: rgb(71, 71, 175);
+  margin-bottom: 30px;
+  margin-top: 10px;
+} 
+.contact form {
+  display: inline;
+}
+}
 #elephant-logo {
   width: 100px;
   /*  Icon made by Freepik from www.flaticon.com  */
