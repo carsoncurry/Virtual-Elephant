@@ -25,12 +25,6 @@ var API = {
     });
   },
 
-  deleteExample: function (id) {
-    return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
-    });
-  }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
@@ -91,4 +85,3 @@ var handleFormSubmit = function(event) {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);

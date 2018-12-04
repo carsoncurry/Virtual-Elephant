@@ -9,16 +9,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
-    <link rel="stylesheet" href="public/styles/friend.css">
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
-    <div class="container">
-        <div class="wrapper animated bounceInLeft">
+    <div class="container rounded" id="invitation-container">
+        <div class="animated bounceInLeft col-md-12">
             <div class="contact">
                 {{#if emailSent}}
                 <br>
-                <div class="alert alert-danger col-md-3 font-weight-bold" role="alert">Email successfully sent!</div>
+                <div class="alert alert-danger col-md-4 font-weight-bold" role="alert"><i class="far fa-smile-wink"></i> Email successfully sent!</div>
                 {{/if}}
                 <h3>Invite Guests</h3>
                 {{msg}}
@@ -28,26 +28,21 @@
                     <label>Guest Email</label>
                     <input type="email" id="author_email" class="form-control col-md-12" name="email" placeholder="Enter your guest's email address.">
                     <label>Message</label>
-                    <textarea name="message" id="invitation-message" class="col-md-12" rows="6" placeholder="Leave your guest a message."></textarea>
-                    <br>
-                    <button id="invitation-button" class="btn btn-lg btn-danger" type="submit">Send Invitation</button>
-                    <br>
-                    <hr>
-                    <div class="text-center">
-                        <a href="/" class="btn btn-sm btn-danger">Return to the Party</a>
-                    </div>
-                    <br>
+                    <textarea name="message" id="invitation-message" class="col-md-12 rounded" rows="10" placeholder="Leave your guest a message."></textarea>
+                    <button id="invitation-button" class="btn btn-lg btn-danger" type="submit"><i class="far fa-envelope"></i> Send Invitation</button>
+                    <a href="/"><button id="return-button" class="btn btn-lg btn-danger" type="button"><i class="far fa-grin-squint-tears"></i> Return to the Party!</button></a>
                 </form>
 
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p><a href="/api/examples">API Virtual Elephant Page Link</a></p>
+    <div class="footer text-dark font-weight-bold">
+        <p>
+        © 2018 Copyright | 
+        <a href="https://github.com/carsoncurry/Virtual-Elephant" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+        </p>
+    </div>
 
-        </div>
-    </footer>
 
 </body>
 
