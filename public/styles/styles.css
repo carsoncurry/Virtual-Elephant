@@ -1,15 +1,43 @@
-body, .placeholder {
+body {
   background: url("../images/Christmas-Jumper-Pattern-4.png");
   font-family: 'Source Code Pro', monospace;
+}
+
+ul:last-child {
+  margin-bottom: 15px;
+}
+
+a {
+  font-weight: bold;
+  color: red;
+}
+
+.card {
+  margin-bottom: 30px;
 }
 
 .jumbotron {
   background: url("../images/Free-Christmas-Blue-Background-2.png");
   font-family: 'Press Start 2P', cursive;
+  border-bottom: solid black;
 }
-#home{
+
+#gift-container, #invitation-container {
+  margin-top: 60px;
+}
+
+#invitation-button, #return-button {
+  margin: 15px 0 15px 0;
+}
+
+#home {
   padding-top: 30px;
 }
+
+#invitation-header {
+  margin-top: 30px;
+}
+
 h1, h2, h3 {
   font-family: 'VT323', monospace;
 }
@@ -17,6 +45,7 @@ h1, h2, h3 {
 .container {
   margin-bottom: 50px;
   background: url("../images/Free-Christmas-Blue-Background-2.png");
+  border: solid black;
 }
 
 .list-group-item {
@@ -35,23 +64,12 @@ ul {
   padding: 0;
 }
 
-.brand {
+/* .brand {
   text-align: center;
-}
-a {
-  font-size: 24px;
-  color: rgb(11, 57, 209);
-}
-a :hover{
-  background-color: yellow;
-}
-.brand span {
-  color: rgb(231, 219, 219);
 }
 
 .wrapper {
   box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
-
 }
 
 .wrapper > * {
@@ -66,23 +84,28 @@ a :hover{
 .invitation-form ul {
   text-align: center;
   margin: 0 0 1rem 0;
-}
+} */
+
 /*g added on 11/30*/
-#author_name, #author_email{
+/* #author_name, #author_email{
     height: 30px;
 }
+
 .para{
   font-size: 24px;
   color: rgb(37, 71, 9);
 }
+
 .h2{
   font-size: 30px;
   font-weight: 900px;
 }
+
 #invitation-container{
   padding-top: 50px;
   padding-bottom: 200px;
 }
+
 .email-message{
   background-color: #8cda84;
   width: 500px;
@@ -92,17 +115,18 @@ a :hover{
   font-size: 20px;
   
 }
+
 .about-form{
   font-size: 24px;
-}
+} */
 
 /**/
-.contact {
+/* .contact {
   background: #768c91;
-}
+} */
 
 /* FORM STYLES */
-.contact form {
+/* .contact form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -135,34 +159,41 @@ a :hover{
   border: 0;
   text-transform: uppercase;
 }
+
 .bounceInLeft{
   background-color: red;
 }
+
 .contact form button:hover,
 .contact form button:focus {
   background: #c0ff14;
   color: rgb(78, 166, 218);
   outline: 0;
   transition: background-color 2s ease-out;
-}
+} */
+
 .footer {
-   position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: rgb(109, 102, 102);
+   background: url("../images/Free-Christmas-Blue-Background-2.png");
    color: white;
    text-align: center;
    padding-bottom: 5px;
    padding-top: 10px;
+   border-top: solid;
+   border-color: black;
 }
+
 /* LARGE SCREENS */
+
 @media(min-width:769px){
   .wrapper{
     display: grid;
     grid-template-columns: 1fr 2fr;
   } 
 }
+
 @media(max-width:768px){
 .contact form button {
   background-color: rgb(71, 71, 175);
@@ -180,7 +211,6 @@ a :hover{
 
 #elephant-chat{
   max-width: 500px;
-  margin: 30px auto;
   margin-bottom: 30px;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
@@ -190,14 +220,16 @@ a :hover{
 #chat-window{
   height: 200px;
   overflow: auto;
-  background: #f9f9f9;
+  background: white;
 }
 
 #output p{
   padding: 14px 0px;
   margin: 0 20px;
   border-bottom: 1px solid #e9e9e9;
-  color: #555;
+  font-weight: bold;
+  color: darkolivegreen;
+  font-family: 'Source Code Pro', monospace;
 }
 
 #feedback p{
@@ -207,13 +239,16 @@ a :hover{
 }
 
 #output strong{
-  color: #575ed8;
+  color: red;
+  font-family: 'Source Code Pro', monospace;
 }
 
 label{
   box-sizing: border-box;
   display: block;
   padding: 10px 20px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
 }
 
 input{
@@ -227,13 +262,9 @@ input{
   border-bottom: 1px solid #eee;
   font-family: Nunito;
   font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
 }
 
-
-
-button{
-  background: #575ed8;
-}
 #send {
   background: red;
   color: #fff;
@@ -242,8 +273,19 @@ button{
   padding: 12px 0;
   width: 100%;
   border-radius: 0 0 2px 2px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+#invite-button, #modal {
+  font-size: 18px;
+  margin: 15px 0 15px 0;
+}
+
+#welcome-text {
+  margin: 5px;
 }
 
 #link-image {
   max-width: 500px;
 }
+

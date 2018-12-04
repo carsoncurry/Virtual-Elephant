@@ -13,67 +13,34 @@
 </head>
 
 <body>
-    <div class="container" id="invitation-container">
-        <div class="wrapper animated bounceInLeft">
-            <div class="invitation-form">
-                <p class="about-form">
-                    Each year around Christmas time people all over the world exchange gifts.
-                    To keep things interesting though, you can randomly assign persons to each other to give a present
-                    to one
-                    another.
-                </p>
-            </div>
+    <div class="container rounded" id="invitation-container">
+        <div class="animated bounceInLeft col-md-12">
             <div class="contact">
                 {{#if emailSent}}
-                <div class="email-message"> <i class="fa fa-envelope" style="font-size:48px;color:red"></i><br>Email
-                    was sent successfully!</div>
+                <br>
+                <div class="alert alert-danger col-md-4 font-weight-bold" role="alert"><i class="far fa-smile-wink"></i> Email successfully sent!</div>
                 {{/if}}
-                <h2 class="h2">Invite Your Friend</h2>
-                <hr>
+                <h3>Invite Guests</h3>
                 {{msg}}
                 <form method="POST" action="/api/friend">
-                    <p class="para"> Sender Inforemation</p><br>
-                    <p>
-                        <label>Name</label>
-                        <input type="text" id="author_name" class="form-control" name="senderName">
-                    </p>
-                    <p>
-                        <label>Email Address</label>
-                        <input type="email" id="author_email" class="form-control" name="senderEmail">
-                    </p>
-
-                    <p class="para">Receiver Inforemation</p><br>
-
-                    <p>
-                        <label>Name</label>
-                        <input type="text" id="author_name" class="form-control" name="receiverName">
-                    </p>
-                    <p>
-                        <label>Email Address</label>
-                        <input type="email" id="author_email" class="form-control" name="receiverEmail">
-                    </p>
-                    <p class="full">
-                        <label>Message</label>
-                        <textarea name="message" id="invitation-message" rows="3"></textarea>
-                    </p>
-                    <div class="full">
-                        <button id="invitation-button" class="btn btn-danger" type="submit">Send Invitation</button>
-                    </div>
-                    <div class="text-center">
-                        <a href="/" class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span>
-                            Go To Virtual Elephant Page!
-                        </a>
-                    </div>
-                    <br>
-                    <p><a href="https://fathomless-eyrie-21415.herokuapp.com/">Click here to play
-                            game</a></p>
+                    <label>Guest Name</label>
+                    <input type="text" id="author_name" class="form-control col-md-12" name="name" placeholder="Enter your guest's name.">
+                    <label>Guest Email</label>
+                    <input type="email" id="author_email" class="form-control col-md-12" name="email" placeholder="Enter your guest's email address.">
+                    <label>Message</label>
+                    <textarea name="message" id="invitation-message" class="col-md-12 rounded" rows="10" placeholder="Leave your guest a message."></textarea>
+                    <button id="invitation-button" class="btn btn-lg btn-danger" type="submit"><i class="far fa-envelope"></i> Send Invitation</button>
+                    <a href="/"><button id="return-button" class="btn btn-lg btn-danger" type="button"><i class="far fa-grin-squint-tears"></i> Return to the Party!</button></a>
                 </form>
 
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>Created by Gezahegn Worku, Carson Curry, Thomas Fricke, and Nathan Heseman.</p>
+    <div class="footer text-dark font-weight-bold">
+        <p>
+        © 2018 Copyright | 
+        <a href="https://github.com/carsoncurry/Virtual-Elephant" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+        </p>
     </div>
 
 

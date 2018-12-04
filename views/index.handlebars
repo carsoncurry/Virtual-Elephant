@@ -1,85 +1,51 @@
 <div class="jumbotron bg-info">
-  <h1 class="text-center"><img src="https://image.flaticon.com/icons/svg/113/113269.svg" id="elephant-logo" alt="logo">
-    {{msg}} <img src="https://image.flaticon.com/icons/svg/113/113269.svg" id="elephant-logo" alt="logo"></h1>
+  <h1 class="text-center"><img class="animated tada" src="https://image.flaticon.com/icons/svg/113/113269.svg" id="elephant-logo" alt="logo">
+    {{msg}} <img class="animated tada" src="https://image.flaticon.com/icons/svg/113/113269.svg" id="elephant-logo" alt="logo"></h1>
 </div>
-<!--g added code below this line-->
-<div class="text-center">
-  <a href="/api/friend"><button class="btn btn-lg btn-primary"><span class="fa fa-credit-card"></span> Invite Your
-      Friend</button></a>
-</div>
-
-<div id="home">
-  <div class="container bg-light rounded">
-    <div class="row col-md-12">
-      <h2 class="text-center">Please fill out some information so that you can enter the party!</h2>
-      <form class="clearfix mb-4 col-md-12" action="POST">
-        <div class="form-group">
-          <lable for="giver-text">Gifter</lable>
-          <input type="text" id="giver-text" class="form-control" aria-describedby="giver-text" placeholder="Enter Who's Giving The Gift">
-        </div>
-        <div class="form-group">
-          <label for="example-text">Gift Recipient</label>
-          <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Who's Recieving The Gift">
-        </div>
-        <div class="form-group">
-          <label for="example-description">Gift Description</label>
-          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Describe Your Gift"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="example-image">Gift Image</label>
-          <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload A Link To Your Image"></textarea>
-        </div>
-        <button id="submit" class="btn btn-primary float-right bg-danger">Submit</button>
-      </form>
-      <h2 class="text-center">Please fill out some information so that you can enter the party!</h2>
-      <form class="clearfix mb-4 col-md-12" action="POST">
-        <div class="form-group">
-          <lable for="giver-text">Gifter</lable>
-          <input type="text" id="giver-text" class="form-control" aria-describedby="giver-text" placeholder="Enter Who's Giving The Gift">
-        </div>
-
-        <div class="form-group">
-          <label for="example-text">Gift Recipient</label>
-          <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Who's Recieving The Gift">
-        </div>
-        <div class="form-group">
-          <label for="example-description">Gift Description</label>
-          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Describe Your Gift"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="example-image">Gift Image</label>
-          <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload A Link To Your Image"></textarea>
-        </div>
-        <button id="submit" class="btn btn-primary float-right bg-danger">Submit</button>
-      </form>
-    </div>
-  </div>
-
-  <br>
 
   <div class="container bg-light rounded">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 col-sm-12">
         <h1 class="text-center">Your Party Room</h1>
       </div>
     </div>
     <hr>
+
+    <div class="container bg-light rounded col-md-8 offset-2 col-sm-12">
+      <div class="row bg-light">
+        <div class="rounded">
+          <h3 class="text-center" id="welcome-text">
+            Welcome to your Virtual Elephant party room!
+            From here you can invite more guests, send gifts, see what you're getting and leave messages in the chat box below!
+          </h3>
+        </div>
+      </div>
+      <div class="row bg-light">
+        <div class="col-md-6">
+          <a href="/api/friend"><button id="invite-button" class="btn btn-lg btn-danger col-md-12"><i class="fas fa-user"></i> Invite Guests! </button></a>
+        </div>
+        <div class="col-md-6">
+          <button id="modal" class="btn btn-lg btn-danger col-md-12"><i class="fas fa-gift"></i> Send Gifts! </button>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-5 col-sm-12">
         <h2>Group Chat:</h2>
         <div id="elephant-chat">
-          <div id="chat-window">
+          <div id="chat-window" class="rounded">
             <div id="output"></div>
             <div id="feedback"></div>
           </div>
-          <input id="handle" type="text" placeholder="Handle" />
-          <input id="message" type="text" placeholder="Message" />
-          <button class="btn bg-danger" id="send">Send</button>
+          <input id="handle" type="text" placeholder="Your Name" />
+          <input id="message" type="text" placeholder="Your Message" />
+          <button class="btn bg-danger rounded" id="send"><i class="far fa-comments"></i> Send</button>
 
         </div>
       </div>
 
-      <div class="col-md-5 offset-2">
+      <div class="col-md-5 offset-2 col-sm-12">
         <h2>Gift Pile:</h2>
         <ul id="example-list" class="list-group">
           {{#each examples}}
@@ -92,14 +58,44 @@
     </div>
   </div>
 </div>
-<footer>
-  <div class="container">
-    <p><a href="/api/friend">API Friend Invitation Page Link!</a>
+
+<div id="home">
+  <div class="container bg-light rounded">
+    <div class="row col-md-12">
+      <h2 class="text-center">Provide your gift information to send your gifts and join the party!</h2>
+      <form class="clearfix mb-4 col-md-12" action="POST">
+        <div class="form-group">
+          <label for="giver-text">Gifter</label>
+          <input type="text" id="giver-text" class="form-control" aria-describedby="giver-text" placeholder="Who is sending the gift?">
+        </div>
+        <div class="form-group">
+          <label for="example-text">Gift Recipient</label>
+          <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Who will receive the gift?">
+        </div>
+        <div class="form-group">
+          <label for="example-description">Gift Description</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Please, leave a brief description of the gift."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="example-image">Gift Image</label>
+          <textarea class="form-control" id="gift-image" aria-describedby="gift-image" placeholder="Upload an image link so they can see their gift!"></textarea>
+        </div>
+        <button id="submit" class="btn btn-primary float-right bg-danger"><i class="fas fa-gift"></i> Submit</button>
+      </form>
+    </div>
   </div>
-</footer>
-<div class="footer">
-  <p>Created by Gezahegn Worku, Carson Curry, Thomas Fricke, and Nathan Heseman.</p>
-</div>
+
+
+<!-- Footer -->
+
+    <div class="footer text-dark font-weight-bold">
+        <p>
+        © 2018 Copyright | 
+        <a href="https://github.com/carsoncurry/Virtual-Elephant" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+        </p>
+    </div>
+
+<!-- Footer -->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/chat.js"></script>
