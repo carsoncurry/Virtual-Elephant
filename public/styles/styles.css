@@ -229,3 +229,11 @@ button{
 #link-image {
   max-width: 500px;
 }
+
+.bg-modal {
+  background: url("../images/Free-Christmas-Blue-Background-2.png");;
+  color: #555;
+  font-size: 18px;
+  border: 0;
+  border-radius: 0 0 2px 2px;
+}

@@ -22,10 +22,8 @@ var API = {
     return $.ajax({
       url: "api/examples",
       type: "GET"
-    });
-  },
-<<<<<<< HEAD
-=======
+    });},
+
  
   
   deleteExample: function (id) {
@@ -35,20 +33,14 @@ var API = {
     });
   }
   
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
+
   // deleteExample: function(id) {
   //   return $.ajax({
   //     url: "api/examples/" + id,
   //     type: "DELETE"
   //   });
   // }
-<<<<<<< HEAD
-=======
-
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
-};
-
-// refreshExamples gets new examples from the db and repopulates the list
+};// refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function () {
   API.getExamples().then(function (data) {
     var $examples = data.map(function (example) {
@@ -102,11 +94,7 @@ var handleFormSubmit = function (event) {
   $exampleDescription.val("");
   $giftImage.val("");
   $giftGiver.val("");
-};
-<<<<<<< HEAD
-
-=======
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
+}
 // // handleDeleteBtnClick is called when an example's delete button is clicked
 // // Remove the example from the db and refresh the list
 // var handleDeleteBtnClick = function() {
@@ -117,12 +105,6 @@ var handleFormSubmit = function (event) {
 //   API.deleteExample(idToDelete).then(function() {
 //     refreshExamples();
 //   });
-// };
-<<<<<<< HEAD
-=======
-
->>>>>>> 2181d0c1d1d0f118007b10d79a4174083d580537
-
-// Add event listeners to the submit and delete buttons
+// };// Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
